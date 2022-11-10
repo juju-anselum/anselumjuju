@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;800&family=Roboto:wght@500;700&display=swap');
+
+
+:root {
+    --bg-color: #fff;
+    --text-color: rgb(255, 193, 154);
+    --desBG-color: rgba(255, 194, 159, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+.title {
+    width: max-content;
+    height: 100vh;
+    font-size: 3rem;
+    color: white;
+    padding: 5%;
+    transform: translate(50% 50%);
+    font-family: Rubik, arial, serif;
+    font-weight: 800;
+    line-height: 1.2;
+    text-transform: uppercase;
+    user-select: none;
+    white-space: noWrap;
+    z-index: 1000;
+    background-color: transparent;
+    overflow-x: hidden;
+}
+
+.title p {
+    z-index: 1000;
+}
+
+.sandal {
+    font-size: 4.5rem;
+    color: var(--text-color);
+    display: inline-block;
+    margin: 0 0.5%;
+}
+
+
+.glassBg {
+    display: inline-block;
+    padding: 0 10% 0 3%;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-top: 0.005px solid rgba(255, 255, 255, 0.505);
+    border-left: 0.005px solid rgba(255, 255, 255, 0.505);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+
+
+/* For Eye */
+
+.eye {
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 0.25vw solid white;
+    display: block;
+    cursor: none;
+}
+
+.eye::before {
+    content: "";
+    background-color: #000;
+    background-image: radial-gradient(ellipse, rgba(255, 255, 255, 0.25), rgba(43, 43, 43, 0.304), black);
+    border-radius: 50%;
+    width: 0.85vw;
+    height: 0.8vw;
+    margin: 2%;
+    position: absolute;
+}
+
+.eyeCover {
+    position: fixed;
+    top: 2.9%;
+    right: 2.9%;
+    width: 2.25vw;
+    height: 2.25vw;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    border: 0.25vw solid black;
+    border-radius: 50%;
+    z-index: 2;
+    animation: eyeLidAnim 5s linear infinite;
+    transform: translateY(-2%)
+}
+
+@keyframes eyeLidAnim {
+    0% {
+        height: 0vw;
+    }
+
+    35% {
+        height: 0vw;
+    }
+
+    50% {
+        height: 2vw;
+    }
+
+    65% {
+        height: 0vw;
+    }
+
+    100% {
+        height: 0vw;
+    }
+}
+
+
+
+
+/* Descriptions */
+
+.des {
+    width: 85%;
+    height: max-content;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: top;
+    background-color: var(--desBG-color);
+    border-radius: 15px;
+    overflow-x: hidden;
+}
+
+.desRows {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    padding: 8% 5%;
+    backdrop-filter: blur(10px);
+}
+
+.desRows:first-child {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.desRows:last-child {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.desRows:nth-child(odd) {
+    backdrop-filter: blur(12px);
+}
+
+.year {
+    flex: 1;
+    font-size: 3.5rem;
+    color: wheat;
+    text-align: left;
+    font-weight: 600;
+    font-family: Geneva, sans-serif, 'Segoe UI', Tahoma, Verdana, arial, serif;
+    border-radius: 15px;
+}
+
+.crntWork {
+    flex: 1;
+    font-size: 1.2rem;
+    color: white;
+    text-align: left;
+    font-family: arial, serif;
+    font-weight: 100;
+    line-height: 1.5;
+    border-radius: 15px;
+}
+
+/* H2 */
+
+h2 {
+    width: 85%;
+    margin: 7% auto;
+    font-size: 1.5rem;
+}
+
+.crntWork a,
+h2 a {
+    text-decoration: none;
+    color: rgb(0, 174, 255);
+    font-family: Rubik, serif, sans-serif;
+}
+
+
+
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: max-content;
+    margin: 5vh 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 15px 15px 0 0;
+    backdrop-filter: blur(10px);
+    overflow-x: hidden;
+}
+
+.copyright {
+    width: 100%;
+    margin: 3vh 0;
+    color: white;
+    font-family: arial, serif;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.contact {
+    width: 25%;
+    margin: 0 0 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.icons {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 0.35vw;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-sizing: content-box;
+    padding: 1%;
+}
+
+.icons img {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+
+/* Mobiles */
+
+@media (max-width:767px) {
+    .title {
+        width: auto;
+        font-size: 2rem;
+        transform: translate(100% 100%);
+        margin: 10% 0 0 5%;
+    }
+
+    .sandal {
+        font-size: 3rem;
+    }
+
+    .year {
+        font-size: 1.9rem;
+        margin-bottom: 13px;
+    }
+
+    .crntWork {
+        font-size: 0.95rem;
+    }
+
+    .eye,
+    .eyeCover {
+        display: none;
+    }
+
+    .des {
+        margin-bottom: 20%;
+    }
+
+    .desRows {
+        flex-direction: column;
+        box-sizing: border-box;
+        align-items: flex-start;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+
+    .contact {
+        width: 100%;
+    }
+
+    .icons {
+        width: 5vw;
+        height: 5vw;
+        border-radius: 1.5vw;
+    }
+}
+
+
+/* Tablets */
+
+@media (min-width:767.02px) and (max-width:1023px) {
+    .title {
+        font-size: 2rem;
+        transform: translate(100% 100%);
+        margin: 10% 0 0 5%;
+    }
+
+    .sandal {
+        font-size: 3rem;
+    }
+
+    .year {
+        font-size: 1.9rem;
+        margin-bottom: 15px;
+    }
+
+    .crntWork {
+        font-size: 0.95rem;
+    }
+
+    .eye,
+    .eyeCover {
+        display: none;
+    }
+
+    .des {
+        margin-bottom: 20%;
+    }
+
+    .desRows {
+        flex-direction: column;
+        box-sizing: border-box;
+        align-items: flex-start;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+    }
+
+    footer {
+        font-size: 1.2rem;
+    }
+
+    .contact {
+        width: 100%;
+    }
+
+    .icons {
+        width: 5vw;
+        height: 5vw;
+        border-radius: 3vw;
+    }
+
+}
+
