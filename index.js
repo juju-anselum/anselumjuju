@@ -113,6 +113,7 @@ textElement.textContent = "";
 
 function hideSplashScreen() {
   splashScreen.style.opacity = "0";
+  setTimeout(() => {splashScreen.style.display= "none";},1000)
 }
 
 function showLettersOneByOne(index, text) {
